@@ -1,0 +1,207 @@
+/* the styles for the elements */
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	background-color: white;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	width: 800px;
+	margin: 0 auto;
+	border: 3px solid #931420;
+	background-color: #fffded;
+}
+a:focus, a:hover {
+	font-style: italic;
+}
+/* the styles for the header */
+header {
+	padding: 1.5em 0 2em 0;
+	border-bottom: 3px solid #931420;
+	background-image: -moz-linear-gradient(
+			30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: -webkit-linear-gradient(
+			30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: -o-linear-gradient(
+			30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: linear-gradient(
+			30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+}
+
+header h2 {
+	font-size: 175%;
+	color: #800000;
+}
+header h3 {
+	font-size: 130%;
+	font-style: italic;
+}
+header img {
+	float: left;
+	padding: 0 30px;
+}
+
+/* rule set for the element of the navigation menu to remove the bullets from the list and sets the margin and padding for the list to 0(zero)*/
+#nav_menu ul {
+	list-style-type: none;
+	position: relative; /* so the submenu cab be positioned*/
+	margin: 0;
+	padding: 0;
+}
+
+/* a rule set for the element to display the list horizontally */
+#nav_menu ul li {
+	float: left;
+}
+
+/* rule set to keep the submenu not to display by default */
+#nav_menu ul ul {
+	display: none;/* don't display submenu until hover of li */
+	position: absolute;
+	top: 100%; /* position the submenu at the bottom of main menu */
+}
+/* a ruleset to the element */
+#nav_menu ul li a {
+	display: block;
+	width: 128px;
+	text-align: center;
+	padding: 1em 1em;
+	text-decoration: none;
+	background-color: #800000;
+	color: white;
+	font-weight: bold;
+}
+
+/* ruleset to current class to set the text color to yellow */
+#nav_menu ul li a.current {
+	color: yellow;
+}
+
+/* ruleset to display list items in the submenu that keeps them from floating so they're displayed vertically */
+#nav_menu ul ul li {
+	float: none;/* display submenu vertically */
+}
+
+/* to display the submenu when mouse hovers over the list item that contains the submenu */
+#nav_menu ul li:hover > ul {/* select the ul child of li element */
+	display: block; /* display submenu on hover of li element */
+}
+
+/* ruleset to display the submenu below the list item, and to add a empty space*/
+#nav_menu>ul::after {
+	content: ""; /* add empty content to the end of the first ul */
+	display: block;/* display that content as block element */
+	clear: both;/* stop the floating of the li elements */
+}
+
+.circle{
+	list-style-type: circle;
+}
+.shadow {
+	text-shadow: 2px 2px 2px #800000;
+}
+/* the styles for the main content */
+main {
+	clear: left;
+}
+main {
+	padding: 0 30px;
+}
+main h2 {
+	color: #800000;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+main h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+main img {
+	padding-bottom: 1em;
+}
+main p {
+	padding-bottom: .5em;
+}
+main blockquote {
+	padding: 0 2em;
+	font-style: italic;
+}
+main ul {
+	padding: 0 0 .25em 1.25em;
+}
+main li {
+	padding-bottom: .35em;
+}
+
+h1 {
+	font-size: 150%;
+	padding-top: 0.5em;
+	padding-bottom: 0.25em;
+	margin: 0;
+}
+
+/* the styles for the article */
+article {
+	padding: .5em 0;
+	border-top: 2px solid #800000;
+	border-bottom: 2px solid #800000;
+}
+article h2 {
+	padding-top: 0;
+	color: #800000;
+}
+
+article h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+
+article img {
+	float: right;
+	margin: 0 0 1em 1em;
+	border: 1px solid black;
+}
+/* the styles for the section */
+section {
+	float: right;
+	width: 525px;
+}
+section h1 {
+	font-size: 175%;
+	margin-top: 0.5em;
+}
+section h2 {
+	padding-top: 0;
+
+}
+section h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+
+
+/* the styles for the aside */
+aside {
+	float: right;
+	width: 215px;
+}
+aside h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+
+
+
+/* the styles for the footer */
+footer {
+	background-color: #931420;
+	clear: both;
+}
+footer p {
+	text-align: center;
+	color: white;
+	padding: 1em 0;
+}
